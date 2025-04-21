@@ -4,7 +4,7 @@ namespace webapi.Models.Entities
 {
     public class User
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         
         [Required]
         public string UserName { get; set; }
@@ -16,5 +16,6 @@ namespace webapi.Models.Entities
 
         [Required]
         public int RoleId { get; set; }
+        public Role Role { get; set; }
     }
 }

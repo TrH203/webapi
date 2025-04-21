@@ -4,16 +4,16 @@ namespace webapi.Models.Entities
 {
     public class Doctor
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public string Name { get; set; }
 
         [Required]
-        public int DateofBirth { get; set; }
+        public DateTime DateofBirth { get; set; }
 
         [Required]
-        public int Specialty { get; set; }
+        public string Specialty { get; set; }
         
         [Required]
         public string PhoneNumber { get; set; }
@@ -21,6 +21,6 @@ namespace webapi.Models.Entities
         [Required]
         public string Email { get; set; }
 
-        public ICollection<Appointments> Appointments { get; set; }
+        public ICollection<Appointment> Appointments { get; set; }
     }
 }
